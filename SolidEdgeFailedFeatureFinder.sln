@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FailedFeatureFinderForSolidEdge", "SolidEdgeFailedFeatureFinder\FailedFeatureFinderForSolidEdge.vbproj", "{3D2867BA-F529-47D3-81B9-A2D9811C952D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D2867BA-F529-47D3-81B9-A2D9811C952D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2867BA-F529-47D3-81B9-A2D9811C952D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2867BA-F529-47D3-81B9-A2D9811C952D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2867BA-F529-47D3-81B9-A2D9811C952D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs40
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SolidEdgeFailedFeatureFinder\\FailedFeatureFinderForSolidEdge.vbproj
+		SccProjectName1 = SolidEdgeFailedFeatureFinder
+		SccLocalPath1 = SolidEdgeFailedFeatureFinder
+	EndGlobalSection
+EndGlobal
