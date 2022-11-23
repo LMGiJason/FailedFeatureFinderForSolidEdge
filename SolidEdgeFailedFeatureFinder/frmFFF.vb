@@ -81,10 +81,16 @@ Public Class frmFFF
                 Cursor = Cursors.WaitCursor
                 mScanedParts.Clear()
                 mSolidApp.DelayCompute = True
-#If Not Debug Then
+#If Not DEBUG Then
                 mSolidApp.Interactive = False
 #End If
                 mSolidApp.Visible = Not chkHideSE.Checked
+                mSolidApp.DelayCompute = True
+                mSolidApp.Interactive = False
+                mSolidApp.ScreenUpdating = False
+                mAsmDoc.UpdatePathfinder(SolidEdgeAssembly.AssemblyPathfinderUpdateConstants.seSuspend)
+
+
 
                 'Register the IOleMessageFilter to handle any threading errors.
                 MessageFilter.Register()
@@ -112,9 +118,12 @@ Public Class frmFFF
                 MessageFilter.Revoke()
                 Cursor = Cursors.Default
                 Me.btnViewLog.Enabled = IO.File.Exists(Log.InfoLogFile)
-                'mSolidApp.DelayCompute = False
                 mSolidApp.Interactive = True
                 mSolidApp.Visible = True
+                mSolidApp.DelayCompute = False
+                mSolidApp.ScreenUpdating = True
+                mAsmDoc.UpdatePathfinder(SolidEdgeAssembly.AssemblyPathfinderUpdateConstants.seResume)
+
                 If mCancel Then
                     Status.Text = "Canceled " & mBadNodes.Count.ToString()
                 Else
@@ -399,7 +408,13 @@ Public Class frmFFF
                             For featureIndex As Integer = 1 To mFeatures.Count
                                 mFeature = mFeatures.Item(featureIndex)
                                 Dim featureName As String = "????????"
-                                featureName = mFeature.EdgebarName
+
+                                If HasMember(mFeature, "EdgebarName") Then
+                                    featureName = mFeature.EdgebarName
+                                Else
+                                    featureName = mFeature.Name
+                                End If
+
                                 Status.Text = "Checking " & featureName
                                 StatusStrip1.Refresh()
 
@@ -410,16 +425,14 @@ Public Class frmFFF
                                     AppendErrorNode(nd, featureName & " - " & featureStatusMsg, featureStatus)
                                     Log.LogInfo("FEATURE , " & mPartDoc.FullName & " , " & featureName & " , " & featureStatusMsg)
                                 Else
-                                    Try
-                                        'TODO fix this
+                                    If HasMember(mFeature, "Profile") Then
                                         If mFeature.profile.parent.IsUnderDefined Then
                                             AppendErrorNode(nd, featureName & " - under-constrained feature", 33)
                                             Log.LogInfo("FEATURE , " & mPartDoc.FullName & " , " & featureName & " , " & featureStatusMsg)
                                         End If
-                                    Catch
-                                    End Try
+                                    End If
                                 End If
-                                ReleaseRCW(mFeature)
+                                    ReleaseRCW(mFeature)
                             Next
                             ReleaseRCW(mFeature)
                         End If
@@ -476,12 +489,19 @@ Public Class frmFFF
 
     End Sub
 
+
+    Public Function HasMember(obj As Object, name As String)
+        Dim pro = obj.GetType().GetProperty(name)
+        Return pro IsNot Nothing
+    End Function
     Private Sub GetFeatureStatus(o As Object, ByRef strMessage As String, ByRef status As SolidEdgePart.FeatureStatusConstants)
         Dim PINNED_FeatureStatusMsg As New String(" "c, 255)
         Dim hGC As GCHandle = GCHandle.Alloc(PINNED_FeatureStatusMsg, GCHandleType.Pinned)
         Try
-            status = o.Status(PINNED_FeatureStatusMsg)
-            strMessage = PINNED_FeatureStatusMsg.Trim
+            If HasMember(o, "Status") Then
+                status = o.Status(PINNED_FeatureStatusMsg)
+                strMessage = PINNED_FeatureStatusMsg.Trim
+            End If
         Catch
             Try
                 status = o.GetStatusEx(PINNED_FeatureStatusMsg)
@@ -581,6 +601,7 @@ Public Class frmFFF
         Dim pt As New Point(0, 0)
         Dim stat As NodeStatus = Nothing
         Try
+            If Not TV_FFF.Visible Then Return
             e.DrawDefault = True
             stat = CType(e.Node.Tag, NodeStatus)
             If stat Is Nothing Then Return
@@ -652,7 +673,7 @@ Public Class frmFFF
 
     Private Sub lvSimplify_ColumnClick(ByVal sender As Object, ByVal e As System.Windows.Forms.ColumnClickEventArgs) Handles lvSimplify.ColumnClick
         ' Get the new sorting column.
-        Dim new_sorting_column As ColumnHeader = _
+        Dim new_sorting_column As ColumnHeader =
             lvSimplify.Columns(e.Column)
 
         ' Figure out the new sorting order.
@@ -675,7 +696,7 @@ Public Class frmFFF
             End If
 
             ' Remove the old sort indicator.
-            m_SortingColumn.Text = _
+            m_SortingColumn.Text =
                 m_SortingColumn.Text.Substring(2)
         End If
 
@@ -688,7 +709,7 @@ Public Class frmFFF
         End If
 
         ' Create a comparer.
-        lvSimplify.ListViewItemSorter = New  _
+        lvSimplify.ListViewItemSorter = New _
             ListViewComparer(e.Column, sort_order)
 
         ' Sort.
