@@ -1,0 +1,60 @@
+SKETCH , c:\_firstLook\MASTERMOVER\Work In Progress\Shock Absorber\Components\MM-00006-002_A.par , Sketch 5 , 
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00226-001_A.asm , MM-00226-001_A.asm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00057-002_A.par , MM-00057-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00056-002_A.par , MM-00056-002_A.par:2 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00047-002_A.par , MM-00047-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00058-002_A.par , MM-00058-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Handle Assembly\Components\MM-00063-001_A.asm , MM-00063-001_A.asm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00221-001_A.asm , MM-00221-001_A.asm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00220-003_A.psm , MM-00220-003_A.psm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Counter Weights\Components\MM-00216-002_A.par , MM-00216-002_A.par:3 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00215-003_A.psm , MM-00215-003_A.psm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00210-002_A.par , MM-00210-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00210-002_A.par , MM-00210-002_A.par:2 , Failed Assembly Relationship
+
+SKETCH , c:\_firstLook\MASTERMOVER\Work In Progress\Battery Pack\Components\MM-00206-002_A.par , Sketch 2 , 
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Cowling\MM-00189-001_B.asm , MM-00189-001_B.asm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Cowling\Components\MM-00116-001_A.asm , MM-00116-001_A.asm:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Cowling\Components\MM-00096-002_A.par , MM-00096-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Cowling\Components\MM-00097-002_A.par , MM-00097-002_A.par:1 , Failed Assembly Relationship
+
+COMPONENT , c:\_firstLook\MASTERMOVER\Work In Progress\Cowling\Components\MM-00109-003_A.psm , MM-00109-003_A.psm:1 , Failed Assembly Relationship
+
+COMPONENT , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00143-003_A.psm , MM-00143-003_A.psm:1 , Failed Assembly Relationship
+
+COMPONENT , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00142-003_A.psm , MM-00142-003_A.psm:1 , Failed Assembly Relationship
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00136-002_A.par , Sketch 1 , 
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00135-002_A.par , Sketch 1 , 
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00134-002_A.par , Sketch 1 , 
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00134-002_A.par , Sketch 2 , 
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00134-002_A.par , Sketch 3 , 
+
+SKETCH , C:\_FirstLook\MasterMover\Work In Progress\Clamp Assembly\Components\MM-00134-002_A.par , Sketch 5 , 
+
+SKETCH , c:\_firstLook\MASTERMOVER\Work In Progress\Height and Pivot\Components\MM-00039-002_A.par , Sketch 4 , 
+
+SKETCH , c:\_firstLook\MASTERMOVER\Work In Progress\Height and Pivot\Components\MM-00039-002_A.par , Sketch 6 , 
+
+SKETCH , c:\_firstLook\MASTERMOVER\Work In Progress\Height and Pivot\Components\MM-00039-002_A.par , Sketch 7 , 
+
